@@ -1,0 +1,182 @@
+:root {
+    --primary-gold: #c5a059;
+    --dark-bg: #121212;
+    --light-text: #ffffff;
+    --gray-text: #a0a0a0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: url('sua-foto-profissional.jpeg') no-repeat center center/cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 19%;
+    position: relative;
+}
+
+.hero-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), var(--dark-bg));
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5%;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-main {
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--primary-gold);
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+    .btn-main:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+
+/* Sobre */
+.about {
+    padding: 80px 0;
+    background: radial-gradient(circle at top right, #1a1a1a, #121212);
+}
+
+    .about h2 {
+        color: var(--primary-gold);
+        margin-bottom: 20px;
+    }
+
+/* Serviços */
+.services {
+    padding: 60px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.img-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid var(--primary-gold);
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+    .img-circle:hover {
+        transform: rotate(5deg) scale(1.1);
+    }
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+    footer a {
+        color: var(--primary-gold);
+        text-decoration: none;
+    }
+/* Botão WhatsApp Profissional */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #FFF;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .whatsapp-float i {
+        font-size: 22px;
+    }
+
+    .whatsapp-float:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+        filter: brightness(1.1);
+    }
+
+/* Responsivo para celular (mostra apenas o ícone se a tela for pequena) */
+@media (max-width: 480px) {
+    .whatsapp-float span {
+        display: none;
+    }
+
+    .whatsapp-float {
+        padding: 15px;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+    }
+}
