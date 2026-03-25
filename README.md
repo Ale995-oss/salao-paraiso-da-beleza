@@ -1,3 +1,7 @@
+## 🌐 Acesse o projeto online
+
+https://ale995-oss.github.io/salao-paraiso-da-beleza/
+
 # 💇‍♀️ Salão Paraíso da Beleza
 
 Projeto web desenvolvido para simular um site de salão de beleza, com foco em apresentação de serviços e prática de desenvolvimento front-end.
